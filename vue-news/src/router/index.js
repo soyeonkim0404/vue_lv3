@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import NewsView from '../views/NewsView.vue'
 import AskView from '../views/AskView.vue'
 import JobsView from '../views/JobsView.vue'
+import UserView from '../views/UserView.vue'
 
 Vue.use(VueRouter);
 
@@ -11,7 +12,7 @@ export const router = new VueRouter({
     routes: [
         {
             path: '/',
-            component: NewsView,
+            redirect: '/news',
         },
         {
             path:'/news',
@@ -24,6 +25,10 @@ export const router = new VueRouter({
         {
             path: '/jobs',
             component: JobsView,
+        },
+        {
+            path: '/user/:id',
+            component: UserView,
         }
     ]
 })
