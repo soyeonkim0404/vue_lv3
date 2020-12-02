@@ -30,10 +30,16 @@ function fetchUserInfo(username) {
     //es6 문법
     return axios.get(`${config.baseUrl}user/${username}.json`);
 }
+function fetchAskItem(askitem) {
+    //return axios.get(config.baseUrl + news/1.json);
+    //es6 문법
+    return axios.get(`${config.baseUrl}item/${askitem}.json`);
+}
 
 export {
     fetchNewsList,
     fetchAskList,
     fetchJobsList,
-    fetchUserInfo
+    fetchUserInfo,
+    fetchAskItem
 }
