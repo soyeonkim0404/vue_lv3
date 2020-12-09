@@ -35,11 +35,15 @@ function fetchAskItem(askitem) {
     //es6 문법
     return axios.get(`${config.baseUrl}item/${askitem}.json`);
 }
+function fetchList(pageName) {
+    return axios.get(`${config.baseUrl}${pageName}/1.json`);
+}
 
 export {
     fetchNewsList,
     fetchAskList,
     fetchJobsList,
     fetchUserInfo,
-    fetchAskItem
+    fetchAskItem,
+    fetchList
 }

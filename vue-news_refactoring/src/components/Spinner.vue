@@ -25,6 +25,7 @@ export default {
     height: 64px;
     top:47%;
     left:47%;
+    display:none;
 }
 
 .lds-facebook div{
